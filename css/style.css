@@ -67,6 +67,15 @@ nav ul li a.order-btn:hover {
   color: var(--mainColor);
 }
 
+.bars {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 25px;
+  color: var(--thirdColor);
+  cursor: pointer;
+}
+
 header {
   background-image: url("../images/hero.jpg");
   width: 100%;
@@ -98,8 +107,8 @@ header .layout .text {
 #button {
   text-decoration: none;
   font-size: 20px;
-  width: 26%;
-  padding: 10px;
+  align-self: flex-start;
+  padding: 10px 25px;
   background-color: var(--secondColor);
   border-radius: 30px;
   color: var(--thirdColor);
@@ -490,38 +499,7 @@ footer {
   .menu-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-}
 
-@media (max-width: 800px) {
-  .about-container {
-    flex-direction: column;
-    gap: 30px;
-  }
-
-  .book-container,
-  .footer-container {
-    flex-direction: column;
-  }
-}
-
-@media (max-width: 600px) {
-  .menu-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-#check {
-  display: none;
-}
-
-.bars {
-  display: none;
-  font-size: 25px;
-  color: var(--thirdColor);
-  cursor: pointer;
-}
-
-@media (max-width: 992px) {
   nav {
     flex-wrap: wrap;
   }
@@ -535,7 +513,7 @@ footer {
     width: 100%;
   }
 
-  #check:checked ~ .list {
+  .list.open {
     display: block;
   }
 
@@ -563,9 +541,22 @@ footer {
   header .layout .text {
     font-size: 16px;
   }
+}
 
-  #button {
-    width: auto;
-    align-self: flex-start;
+@media (max-width: 800px) {
+  .about-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .book-container,
+  .footer-container {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 600px) {
+  .menu-grid {
+    grid-template-columns: 1fr;
   }
 }
