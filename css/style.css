@@ -509,3 +509,63 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+
+#check {
+  display: none;
+}
+
+.bars {
+  display: none;
+  font-size: 25px;
+  color: var(--thirdColor);
+  cursor: pointer;
+}
+
+@media (max-width: 992px) {
+  nav {
+    flex-wrap: wrap;
+  }
+
+  .bars {
+    display: block;
+  }
+
+  .list {
+    display: none;
+    width: 100%;
+  }
+
+  #check:checked ~ .list {
+    display: block;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px 0;
+  }
+
+  nav ul li a {
+    font-size: 16px;
+  }
+
+  header {
+    background-image:
+      linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url("../images/hero.jpg");
+  }
+
+  header .layout {
+    width: 100%;
+    padding-top: 100px;
+  }
+
+  header .layout .text {
+    font-size: 16px;
+  }
+
+  #button {
+    width: auto;
+    align-self: flex-start;
+  }
+}
